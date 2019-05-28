@@ -1,0 +1,24 @@
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\IPSAS.mdf
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\IPSAS_log.ldf
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Gestion Ipsas.exe.config
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Gestion Ipsas.exe.manifest
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Gestion Ipsas.application
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Gestion Ipsas.exe
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Gestion Ipsas.pdb
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Google.Protobuf.dll
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Release\Google.Protobuf.xml
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Properties.Resources.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Authentification.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Ui.GestionCours.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Ui.GestionEnseignant.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Ui.GestionEtudiant.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Ui.GestionIPSAS.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion_Ipsas.Ui.GestionUtilisateurs.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.csproj.GenerateResource.cache
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.csproj.CoreCompileInputs.cache
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.exe.manifest
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.application
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.csproj.CopyComplete
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.exe
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Release\Gestion Ipsas.pdb
