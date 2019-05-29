@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionEnseignant));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.teachersDGV = new System.Windows.Forms.DataGridView();
             this.save = new System.Windows.Forms.Button();
@@ -246,8 +247,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 463);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GestionEnseignant";
-            this.Text = "GestionEnseignant";
+            this.Text = "Gestion Enseignant";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teachersDGV)).EndInit();

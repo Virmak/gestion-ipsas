@@ -126,6 +126,12 @@
     <Compile Include="Ui\GestionEtudiant.Designer.cs">
       <DependentUpon>GestionEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\GestionExamen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\GestionExamen.Designer.cs">
+      <DependentUpon>GestionExamen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\GestionIPSAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\GestionEtudiant.resx">
       <DependentUpon>GestionEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\GestionExamen.resx">
+      <DependentUpon>GestionExamen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ui\GestionIPSAS.resx">
       <DependentUpon>GestionIPSAS.cs</DependentUpon>

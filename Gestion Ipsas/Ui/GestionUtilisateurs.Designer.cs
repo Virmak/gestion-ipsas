@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionUtilisateurs));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.roleCombo = new System.Windows.Forms.ComboBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.usersDgv = new System.Windows.Forms.DataGridView();
@@ -41,11 +43,10 @@
             this.lNameTxt = new System.Windows.Forms.TextBox();
             this.idTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.roleCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDgv)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,23 @@
             this.groupBox1.Size = new System.Drawing.Size(929, 487);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Etudiant";
+            this.groupBox1.Text = "Utilisateurs";
+            // 
+            // roleCombo
+            // 
+            this.roleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roleCombo.FormattingEnabled = true;
+            this.roleCombo.Items.AddRange(new object[] {
+            "Etudiant",
+            "Enseignant",
+            "Responsable Formation",
+            "Responsable Stages",
+            "Responsable Examens",
+            "Directeur"});
+            this.roleCombo.Location = new System.Drawing.Point(469, 100);
+            this.roleCombo.Name = "roleCombo";
+            this.roleCombo.Size = new System.Drawing.Size(435, 24);
+            this.roleCombo.TabIndex = 29;
             // 
             // passwordTxt
             // 
@@ -192,6 +209,16 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Date de naissance";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label4.Location = new System.Drawing.Point(466, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 18);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Role";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -222,40 +249,15 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Identifiant";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(466, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 18);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Role";
-            // 
-            // roleCombo
-            // 
-            this.roleCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.roleCombo.FormattingEnabled = true;
-            this.roleCombo.Items.AddRange(new object[] {
-            "Etudiant",
-            "Enseignant",
-            "Responsable Formation",
-            "Responsable Stages",
-            "Responsable Examens",
-            "Directeur"});
-            this.roleCombo.Location = new System.Drawing.Point(469, 100);
-            this.roleCombo.Name = "roleCombo";
-            this.roleCombo.Size = new System.Drawing.Size(435, 24);
-            this.roleCombo.TabIndex = 29;
-            // 
             // GestionUtilisateurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 532);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GestionUtilisateurs";
-            this.Text = "GestionUtilisateurs";
+            this.Text = "Gestion Utilisateurs";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDgv)).EndInit();
