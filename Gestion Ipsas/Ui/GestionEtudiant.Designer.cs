@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionEtudiant));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.niveauTxt = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,9 +53,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.niveauTxt);
             this.groupBox1.Controls.Add(this.passwordTxt);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.studentsDataGridView);
             this.groupBox1.Controls.Add(this.button4);
@@ -81,37 +77,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Etudiant";
             // 
-            // niveauTxt
-            // 
-            this.niveauTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.niveauTxt.Location = new System.Drawing.Point(647, 100);
-            this.niveauTxt.Name = "niveauTxt";
-            this.niveauTxt.Size = new System.Drawing.Size(257, 24);
-            this.niveauTxt.TabIndex = 30;
-            // 
             // passwordTxt
             // 
             this.passwordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.passwordTxt.Location = new System.Drawing.Point(647, 43);
+            this.passwordTxt.Location = new System.Drawing.Point(23, 100);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(257, 24);
+            this.passwordTxt.Size = new System.Drawing.Size(162, 24);
             this.passwordTxt.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label7.Location = new System.Drawing.Point(644, 79);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 18);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Niveau";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label6.Location = new System.Drawing.Point(644, 22);
+            this.label6.Location = new System.Drawing.Point(20, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 18);
             this.label6.TabIndex = 34;
@@ -175,25 +153,25 @@
             // classeTxt
             // 
             this.classeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.classeTxt.Location = new System.Drawing.Point(371, 100);
+            this.classeTxt.Location = new System.Drawing.Point(528, 100);
             this.classeTxt.Name = "classeTxt";
-            this.classeTxt.Size = new System.Drawing.Size(270, 24);
+            this.classeTxt.Size = new System.Drawing.Size(376, 24);
             this.classeTxt.TabIndex = 29;
             // 
             // birthDate
             // 
             this.birthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.birthDate.Location = new System.Drawing.Point(23, 100);
+            this.birthDate.Location = new System.Drawing.Point(191, 100);
             this.birthDate.Name = "birthDate";
-            this.birthDate.Size = new System.Drawing.Size(342, 24);
+            this.birthDate.Size = new System.Drawing.Size(331, 24);
             this.birthDate.TabIndex = 28;
             // 
             // fNameTxt
             // 
             this.fNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.fNameTxt.Location = new System.Drawing.Point(371, 43);
+            this.fNameTxt.Location = new System.Drawing.Point(528, 43);
             this.fNameTxt.Name = "fNameTxt";
-            this.fNameTxt.Size = new System.Drawing.Size(270, 24);
+            this.fNameTxt.Size = new System.Drawing.Size(376, 24);
             this.fNameTxt.TabIndex = 26;
             // 
             // lNameTxt
@@ -201,11 +179,12 @@
             this.lNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lNameTxt.Location = new System.Drawing.Point(191, 43);
             this.lNameTxt.Name = "lNameTxt";
-            this.lNameTxt.Size = new System.Drawing.Size(174, 24);
+            this.lNameTxt.Size = new System.Drawing.Size(331, 24);
             this.lNameTxt.TabIndex = 25;
             // 
             // idTxt
             // 
+            this.idTxt.Enabled = false;
             this.idTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.idTxt.Location = new System.Drawing.Point(23, 43);
             this.idTxt.Name = "idTxt";
@@ -217,7 +196,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(20, 79);
+            this.label5.Location = new System.Drawing.Point(191, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 18);
             this.label5.TabIndex = 23;
@@ -227,7 +206,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(368, 79);
+            this.label4.Location = new System.Drawing.Point(528, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 22;
@@ -237,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(368, 22);
+            this.label3.Location = new System.Drawing.Point(528, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 21;
@@ -282,9 +261,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox niveauTxt;
         private System.Windows.Forms.TextBox passwordTxt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView studentsDataGridView;
         private System.Windows.Forms.Button button4;

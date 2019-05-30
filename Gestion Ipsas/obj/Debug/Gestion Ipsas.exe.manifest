@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestion Ipsas.exe" size="154088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestion Ipsas.exe" size="368104">
       <assemblyIdentity name="Gestion Ipsas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HCgW3pajTJiM3Sm79Li86Mb/L3lHDxYtxQ3ZgY1/rnA=</dsig:DigestValue>
+        <dsig:DigestValue>Zq/1EqgdJK0V7lU7b9NlDBetUlRp9y1+y1jqHzZXFnw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,22 +87,22 @@
       <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="IPSAS.mdf" size="8388608" writeableType="applicationData">
+  <file name="IPSAS_DB.mdf" size="8388608" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0h9sVx3RYXJgZusfDAAJ8LIFRICgqJiuYURVjl+KRJ0=</dsig:DigestValue>
+      <dsig:DigestValue>4DTOCG1jMkOZuMQD7BP/aRlPMun5KcnRo4ppIVR5x3g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="IPSAS_log.ldf" size="8388608" writeableType="applicationData">
+  <file name="IPSAS_DB_log.ldf" size="8388608" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+P57vQ9PtMYwAH9tlD569Bd+rFPya9Mn+7Ud6TOCt1g=</dsig:DigestValue>
+      <dsig:DigestValue>J2ybm2RjQ/+5x1L1xHt3FQUA9IBoavNvCXKS91RAcFc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="school_U1H_icon.ico" size="34494">

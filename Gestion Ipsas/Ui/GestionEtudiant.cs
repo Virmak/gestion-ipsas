@@ -30,14 +30,14 @@ namespace Gestion_Ipsas.Ui
             studentsDataGridView.Columns[4].Name = "Mot de passe";
             studentsDataGridView.Columns[4].DataPropertyName = "Password";
             studentsDataGridView.Columns[5].Name = "Classe";
-            studentsDataGridView.Columns[5].DataPropertyName = "Niveau";
+            studentsDataGridView.Columns[5].DataPropertyName = "Classe";
             studentsDataGridView.Columns[5].Width = 118;
         }
 
         private void loadStudents()
         {
             BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = User.GetUsersDataTableByRole("Etudiant");
+            bindingSource.DataSource = Student.GetStudentsDataTableByRole();
             studentsDataGridView.DataSource = bindingSource;
         }
 
@@ -58,7 +58,6 @@ namespace Gestion_Ipsas.Ui
                 birthDate.Value = (DateTime)selectedRow.Cells[3].Value;
                 passwordTxt.Text = selectedRow.Cells[4].Value.ToString();
                 classeTxt.Text = selectedRow.Cells[5].Value.ToString().Replace(" ", "");
-                niveauTxt.Text = selectedRow.Cells[5].Value.ToString().Replace(" ", "");
             }
 
         }
@@ -69,8 +68,13 @@ namespace Gestion_Ipsas.Ui
             {
                 MessageBox.Show("Clicker sur Nouveau pour ajouter un étudiant");
             }
-            else if (User.CreateUser(fNameTxt.Text, lNameTxt.Text, birthDate.Value, 
-                passwordTxt.Text, "Etudiant", niveauTxt.Text))
+            else if (fNameTxt.Text == "" || lNameTxt.Text == "" || 
+                passwordTxt.Text == "" || classeTxt.Text == "")
+            {
+                MessageBox.Show("Tous les champs sont obligatoire");
+            }
+            else if(Student.CreateStudent(fNameTxt.Text, lNameTxt.Text, birthDate.Value,
+                passwordTxt.Text, classeTxt.Text))
             {
                 loadStudents();
                 MessageBox.Show("Etudiant Ajouté");
@@ -80,8 +84,8 @@ namespace Gestion_Ipsas.Ui
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (User.UpdateUser(int.Parse(idTxt.Text), fNameTxt.Text, lNameTxt.Text,
-                birthDate.Value, passwordTxt.Text, "Etudiant", niveauTxt.Text))
+            if (idTxt.Text != "" && Student.UpdateStudent(int.Parse(idTxt.Text), fNameTxt.Text, lNameTxt.Text,
+                birthDate.Value, passwordTxt.Text, classeTxt.Text))
             {
                 loadStudents();
                 MessageBox.Show("Etudiant Modifié");
@@ -96,14 +100,13 @@ namespace Gestion_Ipsas.Ui
             passwordTxt.Text = "";
             birthDate.Value = DateTime.Today;
             classeTxt.Text = "";
-            niveauTxt.Text = "";
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
             if (idTxt.Text != "")
             {
-                if (User.DeleteUser(int.Parse(idTxt.Text)))
+                if (Student.DeleteStudent(int.Parse(idTxt.Text)))
                 {
                     MessageBox.Show("Etudiant Supprimé");
                     resetControls();

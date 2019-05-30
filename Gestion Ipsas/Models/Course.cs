@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -20,6 +22,35 @@ namespace Gestion_Ipsas.Models
             dataAdapter.Fill(dataTable);
 
             return dataTable;
+        }
+
+        public static IList<Course> GetCoursesList()
+        {
+            var list = new List<Course>(); 
+            SqlCommand cmd = DbConnection.GetInstance().connection.CreateCommand();
+            cmd.CommandText = "SELECT c.*, t.Id as TeacherId, t.* FROM Courses c INNER JOIN Teachers t ON c.TeacherId = t.Id";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                var c = new Course();
+                c.Id = reader.GetInt32(0);
+                c.Name = reader.GetString(1);
+                c.NbHours = reader.GetInt32(2);
+                c.Teacher = new Teacher
+                {
+                    Id = (int)reader["TeacherId"],
+                    FirstName = (string)reader["FirstName"],
+                    LastName = (string)reader["LastName"],
+                    BirthDate = (DateTime)reader["BirthDate"],
+                    Password = (string)reader["Password"],
+                    Role = "Enseignant"
+                };
+
+                list.Add(c);
+            }
+
+            reader.Close();
+            return list;
         }
 
         public static bool DeleteCourse(int Id)
@@ -81,6 +112,11 @@ namespace Gestion_Ipsas.Models
                 return false;
             }
             return true;
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

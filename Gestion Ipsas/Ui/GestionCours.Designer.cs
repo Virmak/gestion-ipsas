@@ -36,13 +36,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.courseDGV = new System.Windows.Forms.DataGridView();
-            this.teacherTxt = new System.Windows.Forms.TextBox();
             this.nameTxt = new System.Windows.Forms.TextBox();
             this.idTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.teachersCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDGV)).BeginInit();
@@ -50,13 +50,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.teachersCombo);
             this.groupBox1.Controls.Add(this.nbHours);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.courseDGV);
-            this.groupBox1.Controls.Add(this.teacherTxt);
             this.groupBox1.Controls.Add(this.nameTxt);
             this.groupBox1.Controls.Add(this.idTxt);
             this.groupBox1.Controls.Add(this.label4);
@@ -131,14 +131,6 @@
             this.courseDGV.TabIndex = 12;
             this.courseDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.courseDGV_CellClick);
             // 
-            // teacherTxt
-            // 
-            this.teacherTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.teacherTxt.Location = new System.Drawing.Point(543, 45);
-            this.teacherTxt.Name = "teacherTxt";
-            this.teacherTxt.Size = new System.Drawing.Size(227, 24);
-            this.teacherTxt.TabIndex = 7;
-            // 
             // nameTxt
             // 
             this.nameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -196,6 +188,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Identifiant";
             // 
+            // teachersCombo
+            // 
+            this.teachersCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.teachersCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.teachersCombo.FormattingEnabled = true;
+            this.teachersCombo.Location = new System.Drawing.Point(543, 45);
+            this.teachersCombo.Name = "teachersCombo";
+            this.teachersCombo.Size = new System.Drawing.Size(227, 26);
+            this.teachersCombo.TabIndex = 7;
+            // 
             // GestionCours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,7 +222,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox teacherTxt;
         private System.Windows.Forms.TextBox nameTxt;
         private System.Windows.Forms.TextBox idTxt;
         private System.Windows.Forms.DataGridView courseDGV;
@@ -229,5 +230,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown nbHours;
+        private System.Windows.Forms.ComboBox teachersCombo;
     }
 }

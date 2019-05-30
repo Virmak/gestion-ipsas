@@ -38,13 +38,13 @@ namespace Gestion_Ipsas.Ui
             teachersDGV.Columns[4].Name = "Mot de passe";
             teachersDGV.Columns[4].DataPropertyName = "Password";
             teachersDGV.Columns[5].Name = "Spécialité";
-            teachersDGV.Columns[5].DataPropertyName = "Niveau";
+            teachersDGV.Columns[5].DataPropertyName = "Specialite";
         }
 
         private void loadTeachers()
         {
             BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = User.GetUsersDataTableByRole("Enseignant");
+            bindingSource.DataSource = Teacher.GetTeachersDataTable();
             teachersDGV.DataSource = bindingSource;
         }
 
@@ -83,7 +83,7 @@ namespace Gestion_Ipsas.Ui
         {
             if (idTxt.Text != "")
             {
-                if (User.DeleteUser(int.Parse(idTxt.Text)))
+                if (Teacher.DeleteTeacher(int.Parse(idTxt.Text)))
                 {
                     MessageBox.Show("Enseignant Supprimé");
                     resetControls();
@@ -95,8 +95,8 @@ namespace Gestion_Ipsas.Ui
         private void edit_Click(object sender, EventArgs e)
         {
 
-            if (User.UpdateUser(int.Parse(idTxt.Text), fnameTxt.Text, lnameTxt.Text,
-                naissanceDatePicker.Value, passTxt.Text, "Enseignant", specialiteTxt.Text))
+            if (idTxt.Text != "" && Teacher.UpdateTeacher(int.Parse(idTxt.Text), fnameTxt.Text, lnameTxt.Text,
+                naissanceDatePicker.Value, passTxt.Text, specialiteTxt.Text))
             {
                 loadTeachers();
                 MessageBox.Show("Enseignant Modifié");
@@ -105,8 +105,17 @@ namespace Gestion_Ipsas.Ui
 
         private void save_Click(object sender, EventArgs e)
         {
-            if (User.CreateUser(fnameTxt.Text, lnameTxt.Text,
-                naissanceDatePicker.Value, passTxt.Text, "Enseignant", specialiteTxt.Text))
+            if (idTxt.Text != "")
+            {
+                MessageBox.Show("Clicker sur Nouveau pour ajouter un Enseignant");
+            }
+            else if (fnameTxt.Text == "" || lnameTxt.Text == "" ||
+                passTxt.Text == "" || specialiteTxt.Text == "")
+            {
+                MessageBox.Show("Tous les champs sont obligatoire");
+            }
+            else if (Teacher.CreateTeacher(fnameTxt.Text, lnameTxt.Text,
+                naissanceDatePicker.Value, passTxt.Text, specialiteTxt.Text))
             {
                 loadTeachers();
                 MessageBox.Show("Enseignant Ajouté");

@@ -15,14 +15,13 @@ namespace Gestion_Ipsas.Models
         public DateTime BirthDate { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
-        public string Niveau { get; set; }
 
         public User()
         {
 
         }
 
-        public User(int Id, string FirstName, string LastName, DateTime BirthDate, string Password, string Role, string Niveau)
+        public User(int Id, string FirstName, string LastName, DateTime BirthDate, string Password, string Role)
         {
             this.Id = Id;
             this.FirstName = FirstName;
@@ -30,7 +29,6 @@ namespace Gestion_Ipsas.Models
             this.BirthDate = BirthDate;
             this.Password = Password;
             this.Role = Role;
-            this.Niveau = Niveau;
         }
 
         public static User GetUserById(int id)
@@ -38,7 +36,7 @@ namespace Gestion_Ipsas.Models
             User u = null;
             var db = DbConnection.GetInstance();
             var cmd = db.connection.CreateCommand();
-            cmd.CommandText = "SELECT Id, FirstName, LastName, BirthDate, Password, Role, Niveau" +
+            cmd.CommandText = "SELECT Id, FirstName, LastName, BirthDate, Password, Role" +
                 " FROM users WHERE Id = @id";
             cmd.Parameters.AddWithValue("@id", id);
             var reader = cmd.ExecuteReader();
@@ -51,8 +49,7 @@ namespace Gestion_Ipsas.Models
                     LastName = reader.GetString(2),
                     BirthDate = reader.GetDateTime(3),
                     Password = reader.GetString(4),
-                    Role = reader.GetString(5),
-                    Niveau = reader.GetString(6)
+                    Role = reader.GetString(5)
                 };
             }
             reader.Close();

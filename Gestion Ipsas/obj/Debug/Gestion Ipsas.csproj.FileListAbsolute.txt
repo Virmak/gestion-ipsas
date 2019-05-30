@@ -11,8 +11,6 @@ C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\BouncyCastle.
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\Google.Protobuf.dll
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\Google.Protobuf.xml
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion Ipsas.csproj.CopyComplete
-C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\IPSAS.mdf
-C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\IPSAS_log.ldf
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionEtudiant.resources
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionCours.resources
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionEnseignant.resources
@@ -23,3 +21,6 @@ C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\Gestion Ipsas
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\Gestion Ipsas.application
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion Ipsas.exe.manifest
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion Ipsas.application
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionExamen.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\IPSAS_DB.mdf
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\IPSAS_DB_log.ldf

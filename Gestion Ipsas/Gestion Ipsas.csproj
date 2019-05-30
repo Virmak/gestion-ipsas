@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="DbConnection.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Examen.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -185,12 +186,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IPSAS.mdf">
+    <Content Include="IPSAS_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="IPSAS_log.ldf">
+    <Content Include="IPSAS_DB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>IPSAS.mdf</DependentUpon>
+      <DependentUpon>IPSAS_DB.mdf</DependentUpon>
     </Content>
     <None Include="Resources\university-building.png" />
     <None Include="Resources\university-building %281%29.png" />

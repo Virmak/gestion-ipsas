@@ -18,6 +18,11 @@ namespace Gestion_Ipsas.Ui
             InitializeComponent();
             initDGV();
             loadCourses();
+
+            foreach(var t in Teacher.GetTeachersList())
+            {
+                teachersCombo.Items.Add(t);
+            }
         }
 
         private void initDGV()
@@ -49,7 +54,7 @@ namespace Gestion_Ipsas.Ui
             idTxt.Text = "";
             nameTxt.Text = "";
             nbHours.Value = 0;
-            teacherTxt.Text = "";
+            teachersCombo.SelectedIndex = -1;
         }
 
         private void new_Click(object sender, EventArgs e)
@@ -73,8 +78,8 @@ namespace Gestion_Ipsas.Ui
 
         private void update_Click(object sender, EventArgs e)
         {
-            if (Course.UpdateCourse(int.Parse(idTxt.Text), nameTxt.Text, 
-                (int)nbHours.Value, int.Parse(teacherTxt.Text)))
+            if (idTxt.Text != "" && teachersCombo.SelectedIndex > -1 && Course.UpdateCourse(int.Parse(idTxt.Text), nameTxt.Text, 
+                (int)nbHours.Value, ((Teacher)teachersCombo.SelectedItem).Id))
             {
                 loadCourses();
                 MessageBox.Show("Cours Modifié");
@@ -87,7 +92,8 @@ namespace Gestion_Ipsas.Ui
             {
                 MessageBox.Show("Clicked sur Nouveau avant d'ajouter");
             }
-            else if (Course.CreateCourse(nameTxt.Text, (int)nbHours.Value, int.Parse(teacherTxt.Text)))
+            else if (teachersCombo.SelectedIndex > -1 
+                && Course.CreateCourse(nameTxt.Text, (int)nbHours.Value, ((Teacher)teachersCombo.SelectedItem).Id))
             {
                 loadCourses();
                 MessageBox.Show("Cours Ajouté");
@@ -103,8 +109,24 @@ namespace Gestion_Ipsas.Ui
                 idTxt.Text = selectedRow.Cells[0].Value.ToString();
                 nameTxt.Text = selectedRow.Cells[1].Value.ToString();
                 nbHours.Value = int.Parse(selectedRow.Cells[2].Value.ToString());
-                teacherTxt.Text = selectedRow.Cells[3].Value.ToString();
+                teachersCombo.SelectedIndex = getTeacherIndex(int.Parse(selectedRow.Cells[3].Value.ToString()));
+
+
             }
+        }
+
+        private int getTeacherIndex(int teacherId)
+        {
+            for(var i = 0; i < teachersCombo.Items.Count; i++)
+            {
+                if (((Teacher)teachersCombo.Items[i]).Id == teacherId)
+                {
+                    return i;
+                }
+
+            }
+            return -1;
+
         }
     }
 }
