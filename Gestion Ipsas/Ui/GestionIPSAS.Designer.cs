@@ -106,6 +106,7 @@
             this.button6.Text = "Stages";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -123,6 +124,7 @@
             this.button5.Text = "Notes";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 

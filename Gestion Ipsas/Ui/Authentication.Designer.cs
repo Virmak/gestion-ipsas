@@ -96,8 +96,8 @@
             "Enseignant",
             "Etudiant",
             "Responsable Formation",
-            "Responsable Examens",
-            "Responsable Stages",
+            "Responsable Examen",
+            "Responsable Stage",
             "Directeur"});
             this.roleComboBox.Location = new System.Drawing.Point(179, 151);
             this.roleComboBox.Name = "roleComboBox";

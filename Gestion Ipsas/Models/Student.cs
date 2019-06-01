@@ -8,9 +8,9 @@ namespace Gestion_Ipsas.Models
 {
     public class Student : User
     {
-        public string Niveau { get; set; }
+        public string Classe { get; set; }
 
-        public Student(int Id, string FirstName, string LastName, DateTime BirthDate, string Password, string Role, string Niveau)
+        public Student(int Id, string FirstName, string LastName, DateTime BirthDate, string Password, string Classe)
             :base()
         {
             this.Id = Id;
@@ -18,7 +18,7 @@ namespace Gestion_Ipsas.Models
             this.LastName = LastName;
             this.BirthDate = BirthDate;
             this.Password = Password;
-            this.Niveau = Niveau;
+            this.Classe = Classe;
         }
 
         public static Student GetStudentById(int id)
@@ -27,16 +27,34 @@ namespace Gestion_Ipsas.Models
             var db = DbConnection.GetInstance();
             var cmd = db.connection.CreateCommand();
             cmd.CommandText = "SELECT Id, FirstName, LastName, BirthDate, Password, Classe" +
-                " FROM Student WHERE Id = @id";
+                " FROM Students WHERE Id = @id";
             cmd.Parameters.AddWithValue("@id", id);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 s = new Student(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4),
-                    reader.GetString(5), reader.GetString(6));
+                    reader.GetString(5));
             }
             reader.Close();
             return s;
+        }
+
+        public static IList<Student> GetStudentsByClasse(string Classe)
+        {
+            IList<Student> students = new List<Student>();
+            var db = DbConnection.GetInstance();
+            var cmd = db.connection.CreateCommand();
+            cmd.CommandText = "SELECT Id, FirstName, LastName, BirthDate, Password, Classe" +
+                " FROM Students WHERE Classe = @Classe";
+            cmd.Parameters.AddWithValue("@Classe", Classe);
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                students.Add(new Student(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4),
+                    reader.GetString(5)));
+            }
+            reader.Close();
+            return students;
         }
 
         public static DataTable GetStudentsDataTableByRole()
@@ -116,6 +134,11 @@ namespace Gestion_Ipsas.Models
             }
 
             return true;
+        }
+
+        public override string ToString()
+        {
+            return this.FirstName + " " + this.LastName;
         }
     }
 }

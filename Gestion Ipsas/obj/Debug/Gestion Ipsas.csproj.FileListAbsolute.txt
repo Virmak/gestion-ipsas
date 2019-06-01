@@ -24,3 +24,5 @@ C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion Ipsas
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionExamen.resources
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\IPSAS_DB.mdf
 C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\bin\Debug\IPSAS_DB_log.ldf
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionNotes.resources
+C:\Users\virmak\source\repos\Gestion Ipsas\Gestion Ipsas\obj\Debug\Gestion_Ipsas.Ui.GestionStages.resources

@@ -13,9 +13,9 @@ namespace Gestion_Ipsas
 
         private DbConnection(string server, string database, string uid, string password)
         {
-            //string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\\IPSAS_DB.mdf';Integrated Security = True; Connect Timeout = 30";
+            string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\\IPSAS_DB.mdf';Integrated Security = True; Connect Timeout = 30";
 
-            string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename='C:\\USERS\\VIRMAK\\SOURCE\\REPOS\\GESTION IPSAS\\GESTION IPSAS\\IPSAS_DB.MDF';Integrated Security = True; Connect Timeout = 30";
+            //string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename='C:\\USERS\\VIRMAK\\SOURCE\\REPOS\\GESTION IPSAS\\GESTION IPSAS\\IPSAS_DB.MDF';Integrated Security = True; Connect Timeout = 30";
 
             connection = new SqlConnection(connectionString);
             this.OpenConnection();

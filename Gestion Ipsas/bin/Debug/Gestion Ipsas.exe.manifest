@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestion Ipsas.exe" size="368104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestion Ipsas.exe" size="424936">
       <assemblyIdentity name="Gestion Ipsas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Zq/1EqgdJK0V7lU7b9NlDBetUlRp9y1+y1jqHzZXFnw=</dsig:DigestValue>
+        <dsig:DigestValue>bzH1/8h/RtkCdVawApHYfA0So3kaVGpAqD66xh0k4oU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -93,7 +93,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4DTOCG1jMkOZuMQD7BP/aRlPMun5KcnRo4ppIVR5x3g=</dsig:DigestValue>
+      <dsig:DigestValue>HfnvlGQuFQ66MoBzOo4dyzOwE+d6YvhDqq0b2XH+66A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="IPSAS_DB_log.ldf" size="8388608" writeableType="applicationData">
@@ -102,7 +102,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>J2ybm2RjQ/+5x1L1xHt3FQUA9IBoavNvCXKS91RAcFc=</dsig:DigestValue>
+      <dsig:DigestValue>1gJUKtdU05JW9zhkuT/SZ9vodvtYnMDvdXL2U8csK+g=</dsig:DigestValue>
     </hash>
   </file>
   <file name="school_U1H_icon.ico" size="34494">

@@ -73,13 +73,13 @@ namespace Gestion_Ipsas.Ui
                     return true;
                 }
             }
-            else if (user.Role == "Responsable Examens")
+            else if (user.Role == "Responsable Examen")
             {
                 if (module == "examens" || module == "notes")
                 {
                     return true;
                 }
-            } else if (user.Role == "Responsable Stages")
+            } else if (user.Role == "Responsable Stage")
             {
                 if (module == "stages")
                 {
@@ -103,6 +103,24 @@ namespace Gestion_Ipsas.Ui
             {
                 GestionExamen gestionUtilisateurs = new GestionExamen();
                 gestionUtilisateurs.Show();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (hasPermission("notes"))
+            {
+                GestionNotes gestionNotes = new GestionNotes();
+                gestionNotes.Show();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (hasPermission("stages"))
+            {
+                GestionStages gestionNotes = new GestionStages();
+                gestionNotes.Show();
             }
         }
     }

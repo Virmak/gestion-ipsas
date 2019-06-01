@@ -93,6 +93,8 @@
     <Compile Include="DbConnection.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Examen.cs" />
+    <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\Stage.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -139,6 +141,18 @@
     <Compile Include="Ui\GestionIPSAS.Designer.cs">
       <DependentUpon>GestionIPSAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ui\GestionNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\GestionNotes.Designer.cs">
+      <DependentUpon>GestionNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\GestionStages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\GestionStages.Designer.cs">
+      <DependentUpon>GestionStages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ui\GestionUtilisateurs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +181,12 @@
     <EmbeddedResource Include="Ui\GestionIPSAS.resx">
       <DependentUpon>GestionIPSAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ui\GestionNotes.resx">
+      <DependentUpon>GestionNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\GestionStages.resx">
+      <DependentUpon>GestionStages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui\GestionUtilisateurs.resx">
       <DependentUpon>GestionUtilisateurs.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,10 +207,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IPSAS_DB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="IPSAS_DB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>IPSAS_DB.mdf</DependentUpon>
     </Content>
     <None Include="Resources\university-building.png" />

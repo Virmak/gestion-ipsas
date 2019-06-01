@@ -28,9 +28,9 @@ namespace Gestion_Ipsas.Ui
         private void initDGV()
         {
             courseDGV.AutoGenerateColumns = false;
-            courseDGV.ColumnCount = 4;
+            courseDGV.ColumnCount = 5;
 
-            courseDGV.Columns[1].Width = 230;
+            courseDGV.Columns[1].Width = 130;
 
             courseDGV.Columns[0].Name = "Identifiant";
             courseDGV.Columns[0].DataPropertyName = "Id";
@@ -38,8 +38,10 @@ namespace Gestion_Ipsas.Ui
             courseDGV.Columns[1].DataPropertyName = "Name";
             courseDGV.Columns[2].Name = "Nb. Heures";
             courseDGV.Columns[2].DataPropertyName = "NbHour";
-            courseDGV.Columns[3].Name = "Id. Enseignant";
-            courseDGV.Columns[3].DataPropertyName = "TeacherId";
+            courseDGV.Columns[3].Name = "Classe";
+            courseDGV.Columns[3].DataPropertyName = "Classe";
+            courseDGV.Columns[4].Name = "Id. Enseignant";
+            courseDGV.Columns[4].DataPropertyName = "TeacherId";
         }
 
         private void loadCourses()
@@ -54,6 +56,7 @@ namespace Gestion_Ipsas.Ui
             idTxt.Text = "";
             nameTxt.Text = "";
             nbHours.Value = 0;
+            classeTxt.Text = "";
             teachersCombo.SelectedIndex = -1;
         }
 
@@ -79,7 +82,7 @@ namespace Gestion_Ipsas.Ui
         private void update_Click(object sender, EventArgs e)
         {
             if (idTxt.Text != "" && teachersCombo.SelectedIndex > -1 && Course.UpdateCourse(int.Parse(idTxt.Text), nameTxt.Text, 
-                (int)nbHours.Value, ((Teacher)teachersCombo.SelectedItem).Id))
+                (int)nbHours.Value, classeTxt.Text, ((Teacher)teachersCombo.SelectedItem).Id))
             {
                 loadCourses();
                 MessageBox.Show("Cours Modifié");
@@ -93,7 +96,7 @@ namespace Gestion_Ipsas.Ui
                 MessageBox.Show("Clicked sur Nouveau avant d'ajouter");
             }
             else if (teachersCombo.SelectedIndex > -1 
-                && Course.CreateCourse(nameTxt.Text, (int)nbHours.Value, ((Teacher)teachersCombo.SelectedItem).Id))
+                && Course.CreateCourse(nameTxt.Text, (int)nbHours.Value, classeTxt.Text, ((Teacher)teachersCombo.SelectedItem).Id))
             {
                 loadCourses();
                 MessageBox.Show("Cours Ajouté");
@@ -109,7 +112,8 @@ namespace Gestion_Ipsas.Ui
                 idTxt.Text = selectedRow.Cells[0].Value.ToString();
                 nameTxt.Text = selectedRow.Cells[1].Value.ToString();
                 nbHours.Value = int.Parse(selectedRow.Cells[2].Value.ToString());
-                teachersCombo.SelectedIndex = getTeacherIndex(int.Parse(selectedRow.Cells[3].Value.ToString()));
+                classeTxt.Text = selectedRow.Cells[3].Value.ToString();
+                teachersCombo.SelectedIndex = getTeacherIndex(int.Parse(selectedRow.Cells[4].Value.ToString()));
 
 
             }
